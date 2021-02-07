@@ -1,27 +1,70 @@
 #include <stdio.h>
+/*
+  
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWX000KXWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMWNK0kdoooodxOKNWMMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMWXKOxooooooooolooxk0XWMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMWNX0kdoooloooooooooooooodxOKNWMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMWNKOxooolooooooooooooooooooolooxk0XWMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMWNX0kdollooloooooooooooooooooooooloooodk0KNWMMMMMMMMMMMMM
+MMMMMMMMMMWNKOxoollooooooloooooooooooooooooooooooooooooxOKNWMMMMMMMMMM
+MMMMMMMWX0kdoooooooooooooooooooooooooooooooooooooooooooooodk0XNMMMMMMM
+MMMMMMNkdoloooooooooooooooooooooooooooooooooooooooooooooooooooxOXWMMMM
+MMMMMMXxooooloooooooooooooooooooooooooooooooooooooooooooooolool:oKWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooolooc;:OWMMM
+MMMMMMXxooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXxooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooolooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooolooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM 
+        _   _   _   _   _   _   _   _     _   _   _   _   _   _    
+       / \ / \ / \ / \ / \ / \ / \ / \   / \ / \ / \ / \ / \ / \ 
+      ( n | e | w | - | n | o | d | e ) ( s | o | c | i | a | l )
+       \_/ \_/ \_/ \_/ \_/ \_/ \_/ \_/   \_/ \_/ \_/ \_/ \_/ \_/
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXdooooooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMXxooooooooooooooooooooooooooooooooooooooooooooooooooooool;:OWMMM
+MMMMMMXxooolooooooooooooooooooooooooooooooooooooooooooooooooooc;:OWMMM
+MMMMMMW0xoloolooooooooooooooooooooooooooooooooooooooooooooollc;,c0WMMM
+MMMMMMMWXkdollloooooooooooooooooooooooooooooooooooooooollc:;,;:oONMMMM
+MMMMMMMMMWNKOxollloooooooooooooooooooooooooooooooooollc;,,;cdOXNWMMMMM
+MMMMMMMMMMMMMWX0kdolllooooolooooooooooooooooooooolc:;,,:ok0NWMMMMMMMMM
+MMMMMMMMMMMMMMMMWNKOxollloooloooooooooooooooollc:,,;cdOKNWMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMWX0kdollloooooooooooollc:;,,:lx0NWMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMWNKOxollloooooollc:;,;cdOKNWMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMWX0kdolllc:;,,:lx0XWMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNKOdoc:cdkKNWMMMMMMMMMMMMMMMMMMMMMMMMMM
+MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWNXK0KNWMMMMMMMMMMMMMMMMMMMMMMMMMMMMM
+*/
+
 float brut; //brut maas
 float topbrut;// ek odeme toplam brut maas
-float ssk; //SSK primi iþçinin payý
-float issizlik;//Ýþsizlik sigortasý iþçinin payý
-float matrah;//Gelir vergisinin matrahý
-float gelirv;//Gelir vergisi miktarý
-float agi;//Asgari geçim indirimi (AGÝ)
-float odenecekv;//Ödenecek gelir vergisi miktarý
-float damgav;//Damga vergisi miktarý
-float top;//Kesinti toplamý
-float net;//Net Ücret
-float ek;//Ek ödeme mesai vs.
+float ssk; //SSK primi iÅŸÃ§inin payÄ±
+float issizlik;//Ä°ÅŸsizlik sigortasÄ± iÅŸÃ§inin payÄ±
+float matrah;//Gelir vergisinin matrahÄ±
+float gelirv;//Gelir vergisi miktarÄ±
+float agi;//Asgari geÃ§im indirimi (AGÄ°)
+float odenecekv;//Ã–denecek gelir vergisi miktarÄ±
+float damgav;//Damga vergisi miktarÄ±
+float top;//Kesinti toplamÄ±
+float net;//Net Ãœcret
+float ek;//Ek Ã¶deme mesai vs.
 int yil;//bordro yili
 int ay;// bordro ayi;
-char kurum[40];//Kurum Adý 
+char kurum[40];//Kurum AdÄ± 
 char vno[50];//Kurum vergi dairesi ve  nosu
-char ksgk[50];//Kurum SGK Ýþyeri Nosu
+char ksgk[50];//Kurum SGK Ä°ÅŸyeri Nosu
 char tsn[20]; // Kurum Ticaret Sicil Nosu
-char tc[11];//tc kimlik numarasý
+char tc[11];//tc kimlik numarasÄ±
 char adsoy[40];// adi sayadi
 char psig[40];//Personel Sigorta No
 
-void main(){  //Kullanýcýda Ýstelinen Bilgiler Alýnýr
+void main(){  //KullanÄ±cÄ±da Ä°stelinen Bilgiler AlÄ±nÄ±r
 	printf("Lutfen Firma Adi Giriniz: \n");
 	scanf("%s",&kurum);
 	printf("-------------------------------------------------------------------\n");
@@ -57,12 +100,12 @@ void main(){  //Kullanýcýda Ýstelinen Bilgiler Alýnýr
 	printf("-------------------------------------------------------------------\n");
 
 
-	topbrut=brut+ek; //SSK primi iþçinin payý hesaplanýr
+	topbrut=brut+ek; //SSK primi iÅŸÃ§inin payÄ± hesaplanÄ±r
 	ssk=(topbrut*14)/100;
-	issizlik=(topbrut*1)/100; //Ýþsizlik sigortasý iþçinin payý hesaplanýr
-	matrah=topbrut-(ssk+issizlik); //Gelir vergisinin matrahý hesaplanýr
-	gelirv=(matrah*15)/100;//Gelir vergisi miktarý hesaplanýr
-	int sec;//Asgari geçim indirimi (AGÝ) hesaplanýr
+	issizlik=(topbrut*1)/100; //Ä°ÅŸsizlik sigortasÄ± iÅŸÃ§inin payÄ± hesaplanÄ±r
+	matrah=topbrut-(ssk+issizlik); //Gelir vergisinin matrahÄ± hesaplanÄ±r
+	gelirv=(matrah*15)/100;//Gelir vergisi miktarÄ± hesaplanÄ±r
+	int sec;//Asgari geÃ§im indirimi (AGÄ°) hesaplanÄ±r
 	printf("Lutfen Size Uygun Olani Seciniz \n");
 	printf("-------------------------------------------------------------------\n");
 	printf("Bekar icin:1 basiniz \n");
@@ -148,13 +191,13 @@ void main(){  //Kullanýcýda Ýstelinen Bilgiler Alýnýr
        scanf("%d",&sec);
   }
 
-	odenecekv=gelirv-agi;//Ödenecek gelir vergisi miktarý hesaplanýr
-	damgav=topbrut*0.00759;//Damga vergisi miktarý hesaplanýr
-	top=ssk+issizlik+odenecekv+damgav;//Kesinti toplamý hesaplanýr
-	net=topbrut-top;//Net Ücret hesaplanýr
+	odenecekv=gelirv-agi;//Ã–denecek gelir vergisi miktarÄ± hesaplanÄ±r
+	damgav=topbrut*0.00759;//Damga vergisi miktarÄ± hesaplanÄ±r
+	top=ssk+issizlik+odenecekv+damgav;//Kesinti toplamÄ± hesaplanÄ±r
+	net=topbrut-top;//Net Ãœcret hesaplanÄ±r
 	printf("-------------------------------------------------------------------\n");
 	printf("-------------------------------------------------------------------\n");
- // Bilgiler Ekrana basýlýr
+ // Bilgiler Ekrana basÄ±lÄ±r
 	printf("Maas Bordrosu \n");
 	printf("-------------------------------------------------------------------\n");
 	printf("Bordro Yili: %d \n",yil);
